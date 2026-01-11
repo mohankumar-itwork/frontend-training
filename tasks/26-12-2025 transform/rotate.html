@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rorate</title>
+    <style>
+        .rotate, .rotateX, .rotateY, .rotateZ, .rotate-3d {
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+        }
+        .rotate:hover {
+            transform: rotate(90deg);
+            
+        }
+        .rotateX:hover {
+            transform: rotateX(50deg)
+        }
+        .rotateY:hover {
+            transform: rotateY(30deg);
+        }
+        .rotateZ:hover {
+            transform: rotateZ(30deg);
+        }
+        .rotate-3d:hover {
+            transform: rotate3d(1, 1, 1, 90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rotate">rotate</div>
+    <div class="rotateX">rotate-X</div>
+    <div class="rotateY">rotate-Y</div>
+    <div class="rotateZ">rotate-Z</div>
+    <div class="rotate-3d">rotate-3D</div>
+</body>
+</html>

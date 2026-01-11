@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Demo 1</title>
+</head>
+<body>
+    <h2>Practice for link</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe">mdn iframe link</a>
+
+    <h2>Iframe</h2>
+    <h3>Html video</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ok-plXXHlWw?si=hnRI2KwqnREx0aIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <h3>Charminar location<small>this is use only src</small></h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121857.40775408193!2d78.42471557896248!3d17.36161602240089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb978a6e1a939b%3A0xcb5a69e4aaf113fb!2sCharminar!5e0!3m2!1sen!2sin!4v1766551134632!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <h3>we use srcdoc</h3>
+    <iframe srcdoc="
+        <h2>This is iframe, we used in srcdoc<h2>
+        <h3>this is iframe, we used another srcdoc</h3>
+        <h4>why this srcdoc is useful</h4>
+    " frameborder="0"></iframe>
+
+    <iframe src="/practice/formating.html" frameborder="0">testing the iframe</iframe>
+
+    <h3>figure</h3>
+    <figure>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.WVBeLZkhOQnoGlC8NUgr9gHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="never give up image">
+        <figcaption>Never Give Up</figcaption>
+    </figure>
+
+    <h2>Input form</h2>
+    <form>
+        <label>Name: </label>
+        <input type="text" name="name"><br>
+
+        <label>Phone No: </label>
+        <input type="number" name="phone_no"><br>
+        
+        <label>Gender: 
+            <input type="radio">Male 
+            <input type="radio">Female
+        </label><br>
+        
+        <label>Email: </label>
+        <input type="email" name="email"><br>
+        
+        <label for="password">password: </label>
+        <input type="password" name="password"><br>
+        
+        <label>skills: </label>
+        <select name="domain">
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
+            <option value="reactjs">react js</option>
+        </select><br>
+        
+        <label>option & OptGroup</label><br>
+        <select>
+            <optgroup label="fruits">
+                <option value="apple">Apple</option>
+                <option value="banna">Banna</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option value="carrot">Carrot</option>
+                <option value="beetroot">beetroot</option>
+            </optgroup>
+        </select><br>
+
+        <label>Feedback</label><br>
+        <textarea name="feedback" rows="4" cols="100"></textarea><br>
+
+        <label>datalist</label><br>
+        <label>Choose your browser:</label>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Mozilla Firefox">
+            <option value="Microsoft Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
