@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex</title>
+</head>
+<body>
+    <!--CSS Flex Model  
+    It is a layout model that provides an easy and clean way to arrange items within a container.
+    Flexbox can be useful for creating small-scales layouts & is responsive and mobile-friendly.
+    There are 2 main components of the flexbox model:
+     1. flex container: The parent - div Which contains various of divisions is called a flex container.
+     2. flex items: The items inside the container-div are flex items. 
+    
+    flex container
+    1. flex-direction: row | row-reverse | column | column-reverse
+    2. flex-wrap: nowrap | wrap | wrap-reverse
+    3. flex-flow: <flex-direction> <flex-wrap>
+    4. justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+    5. align-items: flex-start | flex-end | center | baseline | stretch
+    6. align-content: flex-start | flex-end | center | space-between | space-around | stretch
+    7. order: <number>
+    8. flex-grow: <number>
+    9. flex-shrink: <number> 
+    10. flex-basis: <length> | auto
+    11. flex: none | <flex-grow> <flex-shrink> <flex-basis>
+    12. align-self: auto | flex-start | flex-end | center | baseline | stretch    
+    -->
+
+    <!-- flex-direction: 
+    The flex-direction property defines the which direction the container wants to stack the flex items.
+     .container {
+        display: flex;
+        flex-direction: row | row-reverse | column | column-reverse;
+    }
+    flex-wrap:
+    By default, flex items will all try to fit onto one line. you can change that and allow the items to wrap as needed with this property.
+    .container {
+        display: flex;
+        flex-wrap: nowrap | wrap | wrap-reverse;
+    }
+    flex-flow:
+    This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. The default value is row nowrap.
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    justify-content:
+    The justify-content property defines the alignment along the main axis. It helps distribute extra free space
+    .container {
+        display: flex;
+        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+    }
+    align-items:
+    The align-items property defines the default behavior for how flex items are laid out along the cross
+    .container {
+        display: flex;
+        align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end | safe | unsafe;
+    }
+    align-content:
+    The align-content property is used to align the flex lines.
+    .container {
+        display: flex;
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch | start | end | self-start | self-end | safe | unsafe;
+    }
+        flex items
+    1. order: <number>
+        the order property specifies the order of the flex items.
+        The first flex item in the code does not have to appear as the first item in the layout.
+        The order value must be a number, default value is 0.
+    2. flex-grow: <number>
+        This defines the ability for a flex item to grow if necessary.
+        If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.
+        If one of the children has a value of 2, that child will take twice as much of the remaining space as the others (or it will try to).
+        .item {
+            flex-grow: 1 | 2 | 3 ...; // default is 0
+        }
+    3. flex-shrink: <number>
+        This defines the ability for a flex item to shrink if necessary.
+        .item {
+            flex-shrink: 1 | 2 | 3 ...; // default is 1
+        }
+    4. flex-basis: <length> | auto
+        this defines the default size of an element before the remaining space is distributed.
+        .item {
+            flex-basis: auto | 20% | 10rem | ...; // default is auto
+        }
+    5. flex: none | <flex-grow> <flex-shrink> <flex-basis>
+        The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties combined.
+        .item {
+            flex: none | 1 1 auto | 2 0 10% | ...; // default is 0 1 auto
+        }
+    6. align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        This allows the default alignement (or the one specified by align-items) to be overridden for individual flex items.
+        .item {
+            align-self: auto | flex-start | flex-end | center | baseline | stretch; // default is auto
+        }
+    -->
+        <div class="container">items-1</div>
+        <div class="container">items-2</div>
+        <div class="container">items-3</div>
+        <div class="container">items-4</div>
+        <div class="container">items-5</div>
+</body>
+</html>
