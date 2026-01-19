@@ -1,36 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex-direction</title>
+    <!-- 
+        flex-direction: row | row-reverse | column | column-reverse
+        flex-wrap: nowrap | wrap | wrap-reverse
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch
+        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+        align-items: flex-start | flex-end | center | baseline | stretch
+    -->
     <style>
-        body {
-            background-color: rgba(0, 0, 0, 0.777);
+        .body-container {
+            background-color: black;
+            width: auto;
+            border: 3px solid white;
         }
-        .flex-directions {
+        .flex-wrap-examples {
             display: flex;
-            border: 2px solid black;
-            height: 400px;
-            margin: 20px;
-            flex-direction: row;
-        }
-        .items {
-            height: 20px;
-            background-color: yellow;
-            border: 2px solid red;
-            margin: 5px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
+
 <body>
-    <div class="flex-directions">
-        <div class="items">items-1</div>
-        <div class="items">items-2</div>
-        <div class="items">items-3</div>
-        <div class="items">items-4</div>
-        
-        <div class="items">items-5</div>
+    <div class="body-container">
+        <!-- Flex Direction Examples -->
+        <div class="flex-direction-examples">
+            <div class="flex-direction-row">
+                <h2 style="color: white;">Flex Direction: Row (default)</h2>
+                <div style="display: flex; 
+                            flex-direction: row; 
+                            border: 2px solid red; 
+                            padding: 10px; 
+                            gap: 10px;">
+                    <div style="background-color: lightblue; padding: 20px;">Item 1</div>
+                    <div style="background-color: lightgreen; padding: 20px;">Item 2</div>
+                    <div style="background-color: lightcoral; padding: 20px;">Item 3</div>
+                </div>
+                <div class="flex-direction-row-reverse">
+                    <h2 style="color: white;">Flex Direction: Row Reverse</h2>
+                    <div style="display: flex; 
+                                flex-direction: row-reverse; 
+                                border: 2px solid red; 
+                                padding: 10px; 
+                                gap: 10px;">
+                        <div style="background-color: lightblue; padding: 20px;">Item 1</div>
+                        <div style="background-color: lightgreen; padding: 20px;">Item 2</div>
+                        <div style="background-color: lightcoral; padding: 20px;">Item 3</div>
+                    </div>
+                    <div class="flex-direction-column">
+                        <h2 style="color: white;">Flex Direction: Column</h2>
+                        <div style="display: flex; 
+                                    flex-direction: column; 
+                                    border: 2px solid red; 
+                                    padding: 10px; 
+                                    gap: 10px;">
+                            <div style="background-color: lightblue; padding: 20px;">Item 1</div>
+                            <div style="background-color: lightgreen; padding: 20px;">Item 2</div>
+                            <div style="background-color: lightcoral; padding: 20px;">Item 3</div>
+                        </div>
+                        <div class="flex-direction-column-reverse">
+                            <h2 style="color: white;">Flex Direction: Column Reverse</h2>
+                            <div style="display: flex; 
+                                        flex-direction: column-reverse; 
+                                        border: 2px solid red; 
+                                        padding: 10px; 
+                                        gap: 10px;">
+                                <div style="background-color: lightblue; padding: 20px;">Item 1</div>
+                                <div style="background-color: lightgreen; padding: 20px;">Item 2</div>
+                                <div style="background-color: lightcoral; padding: 20px;">Item 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- flex-wrap-examples -->
+         <div class="flex-wrap-examples">
+            <h2 style="color: white;">Flex Wrap Examples</h2>
+            <div class="flex-wrap">
+                <!-- nowrap -->
+                <h2 style="color: white;"> - No Wrap Examples</h2>
+                <div style="display: flex; 
+                            flex-wrap: nowrap; 
+                            border: 2px solid yellow; 
+                            padding: 10px; 
+                            gap: 10px; 
+                            width: 300px; 
+                            overflow: auto;">
+                    <div style="background-color: lightpink; padding: 20px; min-width: 100px;">Item 1</div>
+                    <div style="background-color: lightseagreen; padding: 20px; min-width: 100px;">Item 2</div>
+                    <div style="background-color: lightgoldenrodyellow; padding: 20px; min-width: 100px;">Item 3</div>
+                    <div style="background-color: lightgray; padding: 20px; min-width: 100px;">Item 4</div>
+                </div>
+                <h2 style="color: white;">Wrap Examples</h2>
+                <!-- wrap -->
+                <div style="display: flex; 
+                            flex-wrap: wrap; 
+                            border: 2px solid yellow; 
+                            padding: 10px; 
+                            gap: 10px; 
+                            width: 300px;">
+                    <div style="background-color: lightpink; padding: 20px; min-width: 100px;">Item 1</div>
+                    <div style="background-color: lightseagreen; padding: 20px; min-width: 100px;">Item 2</div>
+                    <div style="background-color: lightgoldenrodyellow; padding: 20px; min-width: 100px;">Item 3</div>
+                    <div style="background-color: lightgray; padding: 20px; min-width: 100px;">Item 4</div>
+                </div>
+                <h2 style="color: white;">Wrap Reverse Examples</h2>
+                <!-- wrap-reverse -->
+                <div style="display: flex; 
+                            flex-wrap: wrap-reverse; 
+                            border: 2px solid yellow; 
+                            padding: 10px; 
+                            gap: 10px; 
+                            width: 300px;">
+                    <div style="background-color: lightpink; padding: 20px; min-width: 100px;">Item 1</div>
+                    <div style="background-color: lightseagreen; padding: 20px; min-width: 100px;">Item 2</div>
+                    <div style="background-color: lightgoldenrodyellow; padding: 20px; min-width: 100px;">Item 3</div>
+                    <div style="background-color: lightgray; padding: 20px; min-width: 100px;">Item 4</div>
+                </div>
+            </div>
+        </div>
+        <!-- align-content -->
+        <div class="align-content">
+            <h2 style="color: white;">Align Content Examples</h2>
+            <h2 style="color: white;">align-content: start</h2>
+            <div style="display: flex; 
+                        align-content: start; 
+                        border: 2px solid green; 
+                        padding: 10px; 
+                        gap: 10px; 
+                        height: 300px;">
+                <div style="background-color: lightyellow; padding: 20px; min-width: 100px; min-height: 30px;">Item 1</div>
+                <div style="background-color: lightcyan; padding: 20px; min-width: 100px;">Item 2</div>
+                <div style="background-color: lightsteelblue; padding: 20px; min-width: 100px;">Item 3</div>
+                <div style="background-color: lightgoldenrodyellow; padding: 20px; min-width: 100px;">Item 4</div>
+                <div style="background-color: lightgray; padding: 20px; min-width: 100px;">Item 5</div>
+                <div style="background-color: lightcoral; padding: 20px; min-width: 100px;">Item 6</div>
+            </div>
     </div>
 </body>
 </html>
