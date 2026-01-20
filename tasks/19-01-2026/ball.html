@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        .ball {
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            box-shadow: 14px 12px 9px rgba(5, 5, 5, 0.434);
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+             0% {
+                transform: translateY(0);
+            }
+            20% {
+                transform: translate(0, 700px);
+            }
+            40% {
+                transform: translate(300px, 0);
+            }
+            60% {
+                transform: translate(633px, 700px);
+            }
+            80% {
+                transform: translate(1300px, 0);
+            }
+            100% {  
+                transform: translate(1900px, 1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>
