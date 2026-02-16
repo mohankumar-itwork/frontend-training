@@ -1,0 +1,27 @@
+var obj1 = {
+    name: "Krishna",
+    age: 25
+};
+
+Object.freeze(obj1);
+
+obj1.age = 30;
+obj1.city = "Hyderabad";
+
+console.log("After freeze:", obj1);
+
+
+
+var a = { a: 1, b: 2 };
+var b = { c: 3, d: 4 };
+
+var c = Object.assign({}, a, b);
+
+console.log("After assign:", c);
+
+
+
+var obj2 = { name: "John", age: 30 };
+
+console.log("Has 'name':", Object.hasOwn(obj2, "name"));
+console.log("Has 'salary':", Object.hasOwn(obj2, "salary"));
